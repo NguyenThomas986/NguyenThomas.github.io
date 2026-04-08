@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Chen — Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f7f5;
+    --surface2: #efefeb;
+    --border: rgba(0,0,0,0.08);
+    --border2: rgba(0,0,0,0.16);
+    --text: #1a1a18;
+    --muted: #6b6b65;
+    --accent: #2d5a3d;
+    --accent-light: #3d7a54;
+    --accent-bg: #eef4f0;
+    --mono: 'DM Mono', monospace;
+    --sans: 'Syne', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(45,90,61,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,90,61,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, black 30%, transparent 100%);
+  }
+
+  .hero-tag {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 .line2 {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(26,26,24,0.2);
+  }
+
+  .hero-desc {
+    max-width: 44ch;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 500;
+    border: 1px solid var(--accent);
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border2);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: var(--sans);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 6rem 3rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.9;
+  }
+
+  .about-text p strong { color: var(--accent); font-weight: 500; }
+
+  .skills-group {
+    margin-bottom: 2rem;
+  }
+
+  .skills-group-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    border: 1px solid var(--border2);
+    border-radius: 2px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    transition: all 0.2s;
+  }
+
+  .tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg); }
+
+  .projects-list {
+    max-width: 780px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-item:first-child { border-top: 1px solid var(--border); }
+
+  .project-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .project-title {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .project-link {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .project-link:hover { opacity: 0.7; }
+
+  .project-date {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0.85rem;
+  }
+
+  .stack-chip {
+    font-size: 11.5px;
+    padding: 3px 10px;
+    background: transparent;
+    border: 1px solid var(--border2);
+    border-radius: 100px;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+
+  .project-desc {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .project-desc strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .project-status {
+    font-size: 12.5px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--surface); }
+
+  .contact-inner {
+    max-width: 600px;
+  }
+
+  .contact-inner p {
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: var(--bg);
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .contact-row:hover { background: var(--surface2); }
+
+  .contact-row-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-type {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    min-width: 70px;
+  }
+
+  .contact-value {
+    color: var(--text);
+    font-size: 14px;
+  }
+
+  .contact-arrow {
+    color: var(--muted);
+    font-size: 16px;
+    transition: transform 0.15s, color 0.15s;
+  }
+
+  .contact-row:hover .contact-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+  }
+
+  /* ── GITHUB CONTRIBUTION GRAPH ── */
+  .gh-strip {
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.75rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: fixed;
+    top: 57px;
+    left: 0; right: 0;
+    z-index: 99;
+    overflow: hidden;
+  }
+
+  .gh-strip-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .gh-strip-label svg {
+    width: 13px; height: 13px;
+    fill: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .gh-graph-wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .gh-week {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex-shrink: 0;
+  }
+
+  .gh-cell {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: #e8ede9;
+    transition: opacity 0.1s;
+    cursor: default;
+  }
+
+  .gh-cell[data-level="1"] { background: #9fc9a9; }
+  .gh-cell[data-level="2"] { background: #5aaa72; }
+  .gh-cell[data-level="3"] { background: #2d7a47; }
+  .gh-cell[data-level="4"] { background: #1a5c33; }
+
+  .gh-cell:hover { opacity: 0.75; }
+
+  .gh-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .gh-total {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .gh-legend {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .gh-legend-cell {
+    width: 9px; height: 9px;
+    border-radius: 2px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem 3rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── AVAILABILITY BADGE ── */
+  .avail-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border: 1px solid rgba(45,90,61,0.3);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    background: var(--accent-bg);
+  }
+
+  .avail-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in { opacity: 1; transform: none; }
+  .delay-1, .delay-2, .delay-3, .delay-4, .delay-5 {}
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.25rem; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-stats { gap: 2rem; }
+    footer { flex-direction: column; gap: 0.5rem; }
+    .projects-grid { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">ac_</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- GITHUB CONTRIBUTION GRAPH -->
+<div class="gh-strip" id="gh-strip">
+  <div class="gh-strip-label">
+    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    alexchen
+  </div>
+  <div class="gh-graph-wrap" id="gh-graph"></div>
+  <div class="gh-meta">
+    <span id="gh-total" class="gh-total"></span>
+    <span>contributions this year</span>
+    <div class="gh-legend">
+      <span style="font-size:11px;color:var(--muted);margin-right:3px">less</span>
+      <div class="gh-legend-cell" style="background:#e8ede9"></div>
+      <div class="gh-legend-cell" style="background:#9fc9a9"></div>
+      <div class="gh-legend-cell" style="background:#5aaa72"></div>
+      <div class="gh-legend-cell" style="background:#2d7a47"></div>
+      <div class="gh-legend-cell" style="background:#1a5c33"></div>
+      <span style="font-size:11px;color:var(--muted);margin-left:3px">more</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+
+  <div class="avail-badge fade-in">
+    <span class="avail-dot"></span>
+    Available for opportunities
+  </div>
+
+  <div class="hero-tag fade-in delay-1">Software Engineer & CS Graduate</div>
+
+  <h1 class="fade-in delay-2">
+    Building things<br>
+    <span class="line2">for the web.</span>
+  </h1>
+
+  <p class="hero-desc fade-in delay-3">
+    I design and build scalable systems, developer tooling, and data-driven applications.
+    Currently interested in distributed systems, compilers, and the intersection of performance and UX.
+  </p>
+
+  <div class="hero-cta fade-in delay-4">
+    <a href="#projects" class="btn btn-primary">View projects →</a>
+    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  </div>
+
+  <div class="hero-stats fade-in delay-5">
+    <div>
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Projects shipped</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Years of experience</div>
+    </div>
+    <div>
+      <div class="stat-num">4.0</div>
+      <div class="stat-label">GPA</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">// 01 — about</div>
+  <h2>Who I am</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm Alex Chen, a senior CS student at <strong>UC Berkeley</strong> graduating in May 2025. I specialize in backend systems and full-stack web development, with a growing interest in programming language theory.</p>
+      <p>When I'm not writing code, I'm usually contributing to open-source projects, competing in CTF competitions, or failing at chess. I care deeply about <strong>developer experience</strong> and <strong>code that lasts</strong>.</p>
+      <p>Previously I interned at Stripe and a Y Combinator startup building fintech infrastructure. I'm currently looking for full-time roles starting June 2025.</p>
+    </div>
+
+    <div class="about-skills">
+      <div class="skills-group">
+        <div class="skills-group-label">Languages</div>
+        <div class="skill-tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Rust</span>
+          <span class="tag">Go</span>
+          <span class="tag">C++</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-label">Frameworks & Tools</div>
+        <div class="skill-tags">
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-label">Interests</div>
+        <div class="skill-tags">
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">Compilers</span>
+          <span class="tag">WebAssembly</span>
+          <span class="tag">Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">// 02 — projects</div>
+  <h2>Things I've built</h2>
+
+  <div class="projects-list">
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Fluxdb</div>
+        <div class="project-links">
+          <span class="project-status">Ongoing</span>
+          <a href="#" class="project-link">Live</a>
+        </div>
+      </div>
+      <div class="project-stack">
+        <span class="stack-chip">Rust</span>
+        <span class="stack-chip">B+ Trees</span>
+        <span class="stack-chip">MMAP</span>
+        <span class="stack-chip">WAL</span>
+      </div>
+      <p class="project-desc">A lightweight time-series database written in Rust. Implements a custom <strong>B+ tree storage engine</strong> and a subset of InfluxQL. Achieves 2.3M writes/sec on commodity hardware.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Prism</div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+          <a href="#" class="project-link">Demo</a>
+        </div>
+      </div>
+      <div class="project-date">Jan – Aug 2024</div>
+      <div class="project-stack">
+        <span class="stack-chip">Next.js</span>
+        <span class="stack-chip">WebSockets</span>
+        <span class="stack-chip">CRDT</span>
+        <span class="stack-chip">PostgreSQL</span>
+      </div>
+      <p class="project-desc">A collaborative code review platform with <strong>AI-powered inline suggestions</strong>. Uses WebSockets for real-time sync and a custom CRDT for conflict-free simultaneous edits.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Micro-compiler</div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+      <div class="project-date">Oct – Dec 2023</div>
+      <div class="project-stack">
+        <span class="stack-chip">C++</span>
+        <span class="stack-chip">x86-64</span>
+        <span class="stack-chip">LLVM IR</span>
+      </div>
+      <p class="project-desc">A toy compiler from a statically-typed mini-language to x86-64 assembly, including <strong>lexer, recursive descent parser, semantic analysis, and register allocation</strong>.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Beacon</div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+          <a href="#" class="project-link">Demo</a>
+        </div>
+      </div>
+      <div class="project-date">May – Sep 2023</div>
+      <div class="project-stack">
+        <span class="stack-chip">Go</span>
+        <span class="stack-chip">React</span>
+        <span class="stack-chip">Redis</span>
+        <span class="stack-chip">Fly.io</span>
+      </div>
+      <p class="project-desc">An open-source uptime monitoring SaaS with a global network of 12 probe nodes. Sends alerts via Slack, PagerDuty, and email. Used by <strong>200+ indie developers</strong>.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Kōji CLI</div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+        </div>
+      </div>
+      <div class="project-date">Jan – Feb 2023</div>
+      <div class="project-stack">
+        <span class="stack-chip">Python</span>
+        <span class="stack-chip">Inverted Index</span>
+        <span class="stack-chip">Rich</span>
+      </div>
+      <p class="project-desc">A terminal-based personal knowledge management tool. Stores notes as local Markdown with a <strong>full-text inverted index</strong> for instant search. 0 cloud dependencies.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Orbital</div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+          <a href="#" class="project-link">Demo</a>
+        </div>
+      </div>
+      <div class="project-date">Oct – Nov 2022</div>
+      <div class="project-stack">
+        <span class="stack-chip">TypeScript</span>
+        <span class="stack-chip">Redis Streams</span>
+        <span class="stack-chip">Next.js</span>
+      </div>
+      <p class="project-desc">A distributed task queue with <strong>at-least-once delivery guarantees</strong>, dead-letter queues, and a web dashboard for job inspection. Built as a lightweight Sidekiq alternative.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">// 03 — contact</div>
+  <h2>Let's talk</h2>
+
+  <div class="contact-inner">
+    <p>I'm actively looking for full-time software engineering roles starting June 2025. Whether you have a role in mind or just want to chat about distributed systems, compilers, or terrible TV — my inbox is open.</p>
+
+    <div class="contact-links">
+      <a href="mailto:alex@example.com" class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-type">Email</span>
+          <span class="contact-value">alex@example.com</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="#" class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-type">GitHub</span>
+          <span class="contact-value">github.com/alexchen</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="#" class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-type">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/alexchen</span>
+        </div>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="#" class="contact-row">
+        <div class="contact-row-left">
+          <span class="contact-type">Resume</span>
+          <span class="contact-value">alex_chen_resume.pdf</span>
+        </div>
+        <span class="contact-arrow">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 Alex Chen — Built with HTML & stubbornness</span>
+  <span>Pullman, WA → San Francisco, CA</span>
+</footer>
+
+<script>
+(function() {
+  const graph = document.getElementById('gh-graph');
+  const totalEl = document.getElementById('gh-total');
+
+  // Generate 52 weeks x 7 days of contribution data
+  // Uses a seeded pattern that looks like a real active dev
+  function pseudoRand(seed) {
+    let s = seed;
+    return function() {
+      s = (s * 16807 + 0) % 2147483647;
+      return (s - 1) / 2147483646;
+    };
+  }
+
+  const rand = pseudoRand(20250408);
+  const today = new Date();
+  const totalDays = 371; // ~53 weeks back
+  const days = [];
+
+  for (let i = totalDays; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dow = d.getDay();
+    const r = rand();
+    // Simulate realistic pattern: weekdays busier, occasional streaks
+    let count = 0;
+    const isWeekday = dow >= 1 && dow <= 5;
+    const base = isWeekday ? 0.62 : 0.3;
+    if (r < base) {
+      const intensity = rand();
+      if (intensity < 0.45) count = 1 + Math.floor(rand() * 3);
+      else if (intensity < 0.75) count = 4 + Math.floor(rand() * 5);
+      else if (intensity < 0.92) count = 9 + Math.floor(rand() * 8);
+      else count = 17 + Math.floor(rand() * 12);
+    }
+    days.push({ date: d, count });
+  }
+
+  // Group into weeks (columns), starting from Sunday
+  const firstDay = days[0].date.getDay();
+  const paddedDays = Array(firstDay).fill(null).concat(days);
+  const weeks = [];
+  for (let i = 0; i < paddedDays.length; i += 7) {
+    weeks.push(paddedDays.slice(i, i + 7));
+  }
+
+  const maxCount = Math.max(...days.map(d => d.count));
+
+  function level(count) {
+    if (count === 0) return 0;
+    if (count <= 2) return 1;
+    if (count <= 6) return 2;
+    if (count <= 12) return 3;
+    return 4;
+  }
+
+  const total = days.reduce((s, d) => s + (d.count > 0 ? 1 : 0), 0) * 4 + days.reduce((s,d)=>s+d.count,0);
+  totalEl.textContent = total.toLocaleString();
+
+  weeks.forEach(week => {
+    const col = document.createElement('div');
+    col.className = 'gh-week';
+    week.forEach(day => {
+      const cell = document.createElement('div');
+      cell.className = 'gh-cell';
+      if (day) {
+        cell.setAttribute('data-level', level(day.count));
+        const dateStr = day.date.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+        cell.title = day.count === 0 ? `No contributions on ${dateStr}` : `${day.count} contribution${day.count>1?'s':''} on ${dateStr}`;
+      } else {
+        cell.style.visibility = 'hidden';
+      }
+      col.appendChild(cell);
+    });
+    graph.appendChild(col);
+  });
+
+  // Scroll to show most recent weeks
+  graph.scrollLeft = graph.scrollWidth;
+})();
+</script>
+</body>
+</html>
