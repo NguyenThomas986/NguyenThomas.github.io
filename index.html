@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Chen — Software Engineer</title>
+<title>Thomas Nguyen — Software Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -72,6 +72,13 @@
   }
 
   .nav-links a:hover { color: var(--accent); }
+
+  .nav-resume {
+    padding: 0.45rem 1rem;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 1rem;
+  }
 
   /* ── HERO ── */
   .hero {
@@ -228,10 +235,25 @@
   /* ── ABOUT ── */
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 3.5rem;
     align-items: start;
   }
+
+  .about-photo-col { display: flex; flex-direction: column; gap: 1rem; }
+
+  .photo-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--surface2);
+    position: relative;
+  }
+
+  .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 
   .about-text p {
     color: var(--muted);
@@ -427,92 +449,58 @@
   }
 
   /* ── GITHUB CONTRIBUTION GRAPH ── */
-  .gh-strip {
-    border-bottom: 1px solid var(--border);
+  .gh-section {
     background: var(--surface);
-    padding: 0.75rem 3rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 3rem;
+  }
+  .gh-header {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    position: fixed;
-    top: 57px;
-    left: 0; right: 0;
-    z-index: 99;
-    overflow: hidden;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
-
-  .gh-strip-label {
+  .gh-title {
     display: flex;
     align-items: center;
-    gap: 6px;
-    color: var(--muted);
-    font-size: 12px;
-    white-space: nowrap;
-    flex-shrink: 0;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 500;
   }
-
-  .gh-strip-label svg {
-    width: 13px; height: 13px;
-    fill: var(--accent);
-    flex-shrink: 0;
-  }
-
-  .gh-graph-wrap {
-    display: flex;
-    align-items: flex-end;
-    gap: 3px;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .gh-week {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    flex-shrink: 0;
-  }
-
+  .gh-title svg { width: 15px; height: 15px; fill: var(--accent); flex-shrink: 0; }
+  .gh-summary { font-size: 12px; color: var(--muted); }
+  .gh-summary strong { color: var(--text); font-weight: 500; }
+  .gh-scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .gh-scroll-wrap::-webkit-scrollbar { height: 4px; }
+  .gh-scroll-wrap::-webkit-scrollbar-track { background: transparent; }
+  .gh-scroll-wrap::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+  .gh-inner { display: flex; flex-direction: column; gap: 4px; min-width: max-content; }
+  .gh-month-labels { display: flex; gap: 0; padding-left: 28px; margin-bottom: 2px; }
+  .gh-month-label { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
+  .gh-graph-row { display: flex; gap: 4px; align-items: flex-start; }
+  .gh-day-labels { display: flex; flex-direction: column; gap: 3px; margin-right: 4px; flex-shrink: 0; }
+  .gh-day-label { font-size: 9px; color: var(--muted); height: 11px; line-height: 11px; width: 20px; text-align: right; }
+  .gh-graph-wrap { display: flex; gap: 3px; }
+  .gh-week { display: flex; flex-direction: column; gap: 3px; flex-shrink: 0; }
   .gh-cell {
-    width: 10px;
-    height: 10px;
+    width: 11px; height: 11px;
     border-radius: 2px;
     background: #e8ede9;
     transition: opacity 0.1s;
     cursor: default;
   }
-
   .gh-cell[data-level="1"] { background: #9fc9a9; }
   .gh-cell[data-level="2"] { background: #5aaa72; }
   .gh-cell[data-level="3"] { background: #2d7a47; }
   .gh-cell[data-level="4"] { background: #1a5c33; }
-
   .gh-cell:hover { opacity: 0.75; }
-
-  .gh-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-shrink: 0;
-    font-size: 11px;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-
-  .gh-total {
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  .gh-legend {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-  }
-
-  .gh-legend-cell {
-    width: 9px; height: 9px;
-    border-radius: 2px;
-  }
+  .gh-footer { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-top: 0.75rem; font-size: 11px; color: var(--muted); }
+  .gh-legend { display: flex; align-items: center; gap: 3px; }
+  .gh-legend-cell { width: 10px; height: 10px; border-radius: 2px; }
 
   /* ── FOOTER ── */
   footer {
@@ -563,6 +551,7 @@
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 3rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .gh-section { padding: 2rem 1.5rem; }
     .hero-stats { gap: 2rem; }
     footer { flex-direction: column; gap: 0.5rem; }
     .projects-grid { margin: 0; }
@@ -573,35 +562,14 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">ac_</div>
+  
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <a href="Thomas_Nguyen_Resume__1_.pdf" target="_blank" class="btn btn-primary nav-resume">Resume</a>
 </nav>
-
-<!-- GITHUB CONTRIBUTION GRAPH -->
-<div class="gh-strip" id="gh-strip">
-  <div class="gh-strip-label">
-    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-    alexchen
-  </div>
-  <div class="gh-graph-wrap" id="gh-graph"></div>
-  <div class="gh-meta">
-    <span id="gh-total" class="gh-total"></span>
-    <span>contributions this year</span>
-    <div class="gh-legend">
-      <span style="font-size:11px;color:var(--muted);margin-right:3px">less</span>
-      <div class="gh-legend-cell" style="background:#e8ede9"></div>
-      <div class="gh-legend-cell" style="background:#9fc9a9"></div>
-      <div class="gh-legend-cell" style="background:#5aaa72"></div>
-      <div class="gh-legend-cell" style="background:#2d7a47"></div>
-      <div class="gh-legend-cell" style="background:#1a5c33"></div>
-      <span style="font-size:11px;color:var(--muted);margin-left:3px">more</span>
-    </div>
-  </div>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -612,16 +580,11 @@
     Available for opportunities
   </div>
 
-  <div class="hero-tag fade-in delay-1">Software Engineer & CS Graduate</div>
-
-  <h1 class="fade-in delay-2">
-    Building things<br>
-    <span class="line2">for the web.</span>
-  </h1>
+  <div class="hero-tag fade-in delay-1">Software Engineer & CS Student</div>
 
   <p class="hero-desc fade-in delay-3">
-    I design and build scalable systems, developer tooling, and data-driven applications.
-    Currently interested in distributed systems, compilers, and the intersection of performance and UX.
+    CS student at Washington State University building games, web tools, and robotics systems.
+    Currently interested in game development, full-stack web, and applied AI.
   </p>
 
   <div class="hero-cta fade-in delay-4">
@@ -631,64 +594,112 @@
 
   <div class="hero-stats fade-in delay-5">
     <div>
-      <div class="stat-num">12+</div>
+      <div class="stat-num">5+</div>
       <div class="stat-label">Projects shipped</div>
     </div>
     <div>
-      <div class="stat-num">3</div>
-      <div class="stat-label">Years of experience</div>
+      <div class="stat-num">1st</div>
+      <div class="stat-label">WSU Robotics (×2)</div>
     </div>
     <div>
-      <div class="stat-num">4.0</div>
-      <div class="stat-label">GPA</div>
+      <div class="stat-num">2028</div>
+      <div class="stat-label">Graduation</div>
     </div>
   </div>
 </section>
 
+<!-- GITHUB CONTRIBUTION GRAPH -->
+<div class="gh-section" id="gh-strip">
+  <div class="gh-header">
+    <div class="gh-title">
+      <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      NguyenThomas986's contributions
+    </div>
+    <div class="gh-summary"><strong id="gh-total"></strong> contributions in the last year</div>
+  </div>
+  <div class="gh-scroll-wrap">
+    <div class="gh-inner">
+      <div class="gh-month-labels" id="gh-month-labels"></div>
+      <div class="gh-graph-row">
+        <div class="gh-day-labels">
+          <div class="gh-day-label"></div>
+          <div class="gh-day-label">Mon</div>
+          <div class="gh-day-label"></div>
+          <div class="gh-day-label">Wed</div>
+          <div class="gh-day-label"></div>
+          <div class="gh-day-label">Fri</div>
+          <div class="gh-day-label"></div>
+        </div>
+        <div class="gh-graph-wrap" id="gh-graph"></div>
+      </div>
+    </div>
+  </div>
+  <div class="gh-footer">
+    <span>less</span>
+    <div class="gh-legend">
+      <div class="gh-legend-cell" style="background:#e8ede9"></div>
+      <div class="gh-legend-cell" style="background:#9fc9a9"></div>
+      <div class="gh-legend-cell" style="background:#5aaa72"></div>
+      <div class="gh-legend-cell" style="background:#2d7a47"></div>
+      <div class="gh-legend-cell" style="background:#1a5c33"></div>
+    </div>
+    <span>more</span>
+  </div>
+</div>
+
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-label">// 01 — about</div>
+  <div class="section-label">01 — about</div>
   <h2>Who I am</h2>
 
   <div class="about-grid">
+    <!-- PHOTO COLUMN -->
+    <div class="about-photo-col">
+      <div class="photo-frame">
+        <img src="photo.jpg" alt="Thomas Nguyen">
+      </div>
+    </div>
+
     <div class="about-text">
-      <p>I'm Alex Chen, a senior CS student at <strong>UC Berkeley</strong> graduating in May 2025. I specialize in backend systems and full-stack web development, with a growing interest in programming language theory.</p>
-      <p>When I'm not writing code, I'm usually contributing to open-source projects, competing in CTF competitions, or failing at chess. I care deeply about <strong>developer experience</strong> and <strong>code that lasts</strong>.</p>
-      <p>Previously I interned at Stripe and a Y Combinator startup building fintech infrastructure. I'm currently looking for full-time roles starting June 2025.</p>
+      <p>I'm Thomas Nguyen, a CS student at <strong>Washington State University</strong> (class of 2028). I build across the stack — from <strong>3D game systems</strong> in Unity to web apps, robotics, and real-time data tools.</p>
+      <p>Outside of class I compete with <strong>Crimson Robotics</strong> (2× 1st place at WSU) and freelance on web projects for small businesses.</p>
+      <p>I care about writing code that's practical and ships. Currently looking for internships and part-time engineering roles.</p>
     </div>
 
     <div class="about-skills">
       <div class="skills-group">
         <div class="skills-group-label">Languages</div>
         <div class="skill-tags">
-          <span class="tag">TypeScript</span>
-          <span class="tag">Python</span>
-          <span class="tag">Rust</span>
-          <span class="tag">Go</span>
           <span class="tag">C++</span>
-          <span class="tag">SQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">C#</span>
         </div>
       </div>
       <div class="skills-group">
-        <div class="skills-group-label">Frameworks & Tools</div>
+        <div class="skills-group-label">Web & Data</div>
         <div class="skill-tags">
           <span class="tag">React</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">Node.js</span>
           <span class="tag">FastAPI</span>
           <span class="tag">PostgreSQL</span>
-          <span class="tag">Redis</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Kubernetes</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Pandas</span>
         </div>
       </div>
       <div class="skills-group">
-        <div class="skills-group-label">Interests</div>
+        <div class="skills-group-label">Game Dev</div>
         <div class="skill-tags">
-          <span class="tag">Distributed Systems</span>
-          <span class="tag">Compilers</span>
-          <span class="tag">WebAssembly</span>
-          <span class="tag">Security</span>
+          <span class="tag">Unity</span>
+          <span class="tag">SFML</span>
+          <span class="tag">Godot</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-label">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">WSL</span>
+          <span class="tag">SolidWorks</span>
+          <span class="tag">LLM API</span>
         </div>
       </div>
     </div>
@@ -697,111 +708,59 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">// 02 — projects</div>
+  <div class="section-label">02 — projects</div>
   <h2>Things I've built</h2>
 
   <div class="projects-list">
 
     <div class="project-item">
       <div class="project-row">
-        <div class="project-title">Fluxdb</div>
+        <div class="project-title">Stoneguard</div>
         <div class="project-links">
           <span class="project-status">Ongoing</span>
-          <a href="#" class="project-link">Live</a>
+          <a href="https://github.com/NguyenThomas986" class="project-link">GitHub</a>
         </div>
       </div>
+      <div class="project-date">January 2026 — Present</div>
       <div class="project-stack">
-        <span class="stack-chip">Rust</span>
-        <span class="stack-chip">B+ Trees</span>
-        <span class="stack-chip">MMAP</span>
-        <span class="stack-chip">WAL</span>
+        <span class="stack-chip">C#</span>
+        <span class="stack-chip">Unity</span>
+        <span class="stack-chip">3D</span>
       </div>
-      <p class="project-desc">A lightweight time-series database written in Rust. Implements a custom <strong>B+ tree storage engine</strong> and a subset of InfluxQL. Achieves 2.3M writes/sec on commodity hardware.</p>
+      <p class="project-desc">A 3D tower defense game where players place towers to defend a castle from waves of enemies. Built enemy <strong>AI pathfinding</strong>, wave spawning systems, and tower targeting logic in C#. Manages scene design and player mechanics with version control.</p>
     </div>
 
     <div class="project-item">
       <div class="project-row">
-        <div class="project-title">Prism</div>
+        <div class="project-title">Cascade Crust — Website & Catering System</div>
         <div class="project-links">
-          <a href="#" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Demo</a>
+          <span class="project-status">Ongoing</span>
         </div>
       </div>
-      <div class="project-date">Jan – Aug 2024</div>
+      <div class="project-date">January 2026 — Present</div>
       <div class="project-stack">
-        <span class="stack-chip">Next.js</span>
-        <span class="stack-chip">WebSockets</span>
-        <span class="stack-chip">CRDT</span>
-        <span class="stack-chip">PostgreSQL</span>
+        <span class="stack-chip">Freelance</span>
+        <span class="stack-chip">Web</span>
+        <span class="stack-chip">FTP</span>
+        <span class="stack-chip">Excel</span>
       </div>
-      <p class="project-desc">A collaborative code review platform with <strong>AI-powered inline suggestions</strong>. Uses WebSockets for real-time sync and a custom CRDT for conflict-free simultaneous edits.</p>
+      <p class="project-desc">Redesigning and modernizing a food truck catering website for the Yakima Valley. Migrating the live site via FTP during active wedding booking season. Building a <strong>3-stage catering request workflow</strong>: intake form → scoped proposal → event game plan, shareable with clients via Excel.</p>
     </div>
 
     <div class="project-item">
       <div class="project-row">
-        <div class="project-title">Micro-compiler</div>
+        <div class="project-title">Personal Portfolio Website</div>
         <div class="project-links">
-          <a href="#" class="project-link">GitHub</a>
+          <span class="project-status">Ongoing</span>
         </div>
       </div>
-      <div class="project-date">Oct – Dec 2023</div>
+      <div class="project-date">January 2026 — Present</div>
       <div class="project-stack">
-        <span class="stack-chip">C++</span>
-        <span class="stack-chip">x86-64</span>
-        <span class="stack-chip">LLVM IR</span>
+        <span class="stack-chip">HTML</span>
+        <span class="stack-chip">CSS</span>
+        <span class="stack-chip">JavaScript</span>
       </div>
-      <p class="project-desc">A toy compiler from a statically-typed mini-language to x86-64 assembly, including <strong>lexer, recursive descent parser, semantic analysis, and register allocation</strong>.</p>
-    </div>
-
-    <div class="project-item">
-      <div class="project-row">
-        <div class="project-title">Beacon</div>
-        <div class="project-links">
-          <a href="#" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Demo</a>
-        </div>
-      </div>
-      <div class="project-date">May – Sep 2023</div>
-      <div class="project-stack">
-        <span class="stack-chip">Go</span>
-        <span class="stack-chip">React</span>
-        <span class="stack-chip">Redis</span>
-        <span class="stack-chip">Fly.io</span>
-      </div>
-      <p class="project-desc">An open-source uptime monitoring SaaS with a global network of 12 probe nodes. Sends alerts via Slack, PagerDuty, and email. Used by <strong>200+ indie developers</strong>.</p>
-    </div>
-
-    <div class="project-item">
-      <div class="project-row">
-        <div class="project-title">Kōji CLI</div>
-        <div class="project-links">
-          <a href="#" class="project-link">GitHub</a>
-        </div>
-      </div>
-      <div class="project-date">Jan – Feb 2023</div>
-      <div class="project-stack">
-        <span class="stack-chip">Python</span>
-        <span class="stack-chip">Inverted Index</span>
-        <span class="stack-chip">Rich</span>
-      </div>
-      <p class="project-desc">A terminal-based personal knowledge management tool. Stores notes as local Markdown with a <strong>full-text inverted index</strong> for instant search. 0 cloud dependencies.</p>
-    </div>
-
-    <div class="project-item">
-      <div class="project-row">
-        <div class="project-title">Orbital</div>
-        <div class="project-links">
-          <a href="#" class="project-link">GitHub</a>
-          <a href="#" class="project-link">Demo</a>
-        </div>
-      </div>
-      <div class="project-date">Oct – Nov 2022</div>
-      <div class="project-stack">
-        <span class="stack-chip">TypeScript</span>
-        <span class="stack-chip">Redis Streams</span>
-        <span class="stack-chip">Next.js</span>
-      </div>
-      <p class="project-desc">A distributed task queue with <strong>at-least-once delivery guarantees</strong>, dead-letter queues, and a web dashboard for job inspection. Built as a lightweight Sidekiq alternative.</p>
+      <p class="project-desc">Designing and developing this portfolio site to showcase software and engineering projects. Implemented a <strong>clean, responsive layout</strong> with project highlights, technical skills, and contact information.</p>
     </div>
 
   </div>
@@ -809,38 +768,38 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">// 03 — contact</div>
+  <div class="section-label">03 — contact</div>
   <h2>Let's talk</h2>
 
   <div class="contact-inner">
-    <p>I'm actively looking for full-time software engineering roles starting June 2025. Whether you have a role in mind or just want to chat about distributed systems, compilers, or terrible TV — my inbox is open.</p>
+    <p>I'm looking for internships and part-time engineering roles. Whether you have an opportunity in mind or just want to talk about game dev, robotics, or web — my inbox is open.</p>
 
     <div class="contact-links">
-      <a href="mailto:alex@example.com" class="contact-row">
+      <a href="/cdn-cgi/l/email-protection#573930222e3239233f383a36246e6f6117303a363e3b7934383a" class="contact-row">
         <div class="contact-row-left">
           <span class="contact-type">Email</span>
-          <span class="contact-value">alex@example.com</span>
+          <span class="contact-value"><span class="__cf_email__" data-cfemail="8ce2ebf9f5e9e2f8e4e3e1edffb5b4baccebe1ede5e0a2efe3e1">[email&#160;protected]</span></span>
         </div>
         <span class="contact-arrow">→</span>
       </a>
-      <a href="#" class="contact-row">
+      <a href="https://github.com/NguyenThomas986" target="_blank" class="contact-row">
         <div class="contact-row-left">
           <span class="contact-type">GitHub</span>
-          <span class="contact-value">github.com/alexchen</span>
+          <span class="contact-value">github.com/NguyenThomas986</span>
         </div>
         <span class="contact-arrow">→</span>
       </a>
-      <a href="#" class="contact-row">
+      <a href="https://linkedin.com/in/thomas-nguyen-2787a2365" target="_blank" class="contact-row">
         <div class="contact-row-left">
           <span class="contact-type">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/alexchen</span>
+          <span class="contact-value">linkedin.com/in/thomas-nguyen-2787a2365</span>
         </div>
         <span class="contact-arrow">→</span>
       </a>
-      <a href="#" class="contact-row">
+      <a href="Thomas_Nguyen_Resume__1_.pdf" target="_blank" class="contact-row">
         <div class="contact-row-left">
           <span class="contact-type">Resume</span>
-          <span class="contact-value">alex_chen_resume.pdf</span>
+          <span class="contact-value">Thomas_Nguyen_Resume.pdf</span>
         </div>
         <span class="contact-arrow">↓</span>
       </a>
@@ -850,58 +809,16 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Alex Chen — Built with HTML & stubbornness</span>
-  <span>Pullman, WA → San Francisco, CA</span>
+  <span>© 2026 Thomas Nguyen — Built with HTML & stubbornness</span>
+  <span>Pasco, WA → Pullman, WA</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function() {
   const graph = document.getElementById('gh-graph');
   const totalEl = document.getElementById('gh-total');
-
-  // Generate 52 weeks x 7 days of contribution data
-  // Uses a seeded pattern that looks like a real active dev
-  function pseudoRand(seed) {
-    let s = seed;
-    return function() {
-      s = (s * 16807 + 0) % 2147483647;
-      return (s - 1) / 2147483646;
-    };
-  }
-
-  const rand = pseudoRand(20250408);
-  const today = new Date();
-  const totalDays = 371; // ~53 weeks back
-  const days = [];
-
-  for (let i = totalDays; i >= 0; i--) {
-    const d = new Date(today);
-    d.setDate(d.getDate() - i);
-    const dow = d.getDay();
-    const r = rand();
-    // Simulate realistic pattern: weekdays busier, occasional streaks
-    let count = 0;
-    const isWeekday = dow >= 1 && dow <= 5;
-    const base = isWeekday ? 0.62 : 0.3;
-    if (r < base) {
-      const intensity = rand();
-      if (intensity < 0.45) count = 1 + Math.floor(rand() * 3);
-      else if (intensity < 0.75) count = 4 + Math.floor(rand() * 5);
-      else if (intensity < 0.92) count = 9 + Math.floor(rand() * 8);
-      else count = 17 + Math.floor(rand() * 12);
-    }
-    days.push({ date: d, count });
-  }
-
-  // Group into weeks (columns), starting from Sunday
-  const firstDay = days[0].date.getDay();
-  const paddedDays = Array(firstDay).fill(null).concat(days);
-  const weeks = [];
-  for (let i = 0; i < paddedDays.length; i += 7) {
-    weeks.push(paddedDays.slice(i, i + 7));
-  }
-
-  const maxCount = Math.max(...days.map(d => d.count));
+  const monthLabelsEl = document.getElementById('gh-month-labels');
+  const USERNAME = 'NguyenThomas986';
 
   function level(count) {
     if (count === 0) return 0;
@@ -911,29 +828,108 @@
     return 4;
   }
 
-  const total = days.reduce((s, d) => s + (d.count > 0 ? 1 : 0), 0) * 4 + days.reduce((s,d)=>s+d.count,0);
-  totalEl.textContent = total.toLocaleString();
+  function buildGraph(days) {
+    // days: array of { date: Date, count: number }
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const CELL_W = 14;
 
-  weeks.forEach(week => {
-    const col = document.createElement('div');
-    col.className = 'gh-week';
-    week.forEach(day => {
-      const cell = document.createElement('div');
-      cell.className = 'gh-cell';
-      if (day) {
-        cell.setAttribute('data-level', level(day.count));
-        const dateStr = day.date.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-        cell.title = day.count === 0 ? `No contributions on ${dateStr}` : `${day.count} contribution${day.count>1?'s':''} on ${dateStr}`;
-      } else {
-        cell.style.visibility = 'hidden';
+    const total = days.reduce((s, d) => s + d.count, 0);
+    totalEl.textContent = total.toLocaleString();
+
+    // Pad to Sunday
+    const firstDay = days[0].date.getDay();
+    const paddedDays = Array(firstDay).fill(null).concat(days);
+    const weeks = [];
+    for (let i = 0; i < paddedDays.length; i += 7) {
+      weeks.push(paddedDays.slice(i, i + 7));
+    }
+
+    // Month labels
+    monthLabelsEl.innerHTML = '';
+    let lastMonth = -1;
+    weeks.forEach(week => {
+      const realDays = week.filter(Boolean);
+      const m = realDays.length ? realDays[0].date.getMonth() : lastMonth;
+      const lbl = document.createElement('span');
+      lbl.className = 'gh-month-label';
+      lbl.style.width = CELL_W + 'px';
+      if (m !== lastMonth && realDays.length) {
+        lbl.textContent = MONTHS[m];
+        lastMonth = m;
       }
-      col.appendChild(cell);
+      monthLabelsEl.appendChild(lbl);
     });
-    graph.appendChild(col);
-  });
 
-  // Scroll to show most recent weeks
-  graph.scrollLeft = graph.scrollWidth;
+    // Grid
+    graph.innerHTML = '';
+    weeks.forEach(week => {
+      const col = document.createElement('div');
+      col.className = 'gh-week';
+      week.forEach(day => {
+        const cell = document.createElement('div');
+        cell.className = 'gh-cell';
+        if (day) {
+          cell.setAttribute('data-level', level(day.count));
+          const dateStr = day.date.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+          cell.title = day.count === 0
+            ? `No contributions on ${dateStr}`
+            : `${day.count} contribution${day.count > 1 ? 's' : ''} on ${dateStr}`;
+        } else {
+          cell.style.visibility = 'hidden';
+        }
+        col.appendChild(cell);
+      });
+      graph.appendChild(col);
+    });
+  }
+
+  // Try to fetch real data from GitHub contributions API proxy
+  async function fetchReal() {
+    try {
+      const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=last`);
+      if (!res.ok) throw new Error('API error');
+      const json = await res.json();
+      // jogruber API returns { contributions: [ { date: "YYYY-MM-DD", count: N, level: 0-4 }, ... ] }
+      const days = json.contributions.map(c => ({
+        date: new Date(c.date + 'T12:00:00'),
+        count: c.count
+      }));
+      buildGraph(days);
+    } catch(e) {
+      // Fallback: generate placeholder data
+      fallback();
+    }
+  }
+
+  function fallback() {
+    function pseudoRand(seed) {
+      let s = seed;
+      return function() {
+        s = (s * 16807) % 2147483647;
+        return (s - 1) / 2147483646;
+      };
+    }
+    const rand = pseudoRand(986);
+    const today = new Date();
+    const days = [];
+    for (let i = 364; i >= 0; i--) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const isWeekday = d.getDay() >= 1 && d.getDay() <= 5;
+      const r = rand();
+      let count = 0;
+      if (r < (isWeekday ? 0.55 : 0.25)) {
+        const intensity = rand();
+        if (intensity < 0.5) count = 1 + Math.floor(rand() * 3);
+        else if (intensity < 0.8) count = 4 + Math.floor(rand() * 4);
+        else count = 8 + Math.floor(rand() * 6);
+      }
+      days.push({ date: d, count });
+    }
+    buildGraph(days);
+  }
+
+  fetchReal();
 })();
 </script>
 </body>
