@@ -115,4 +115,4 @@
 
   fetchReal();
 })();
-</script>
+
