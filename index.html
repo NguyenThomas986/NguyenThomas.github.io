@@ -11,7 +11,6 @@
 
 <!-- NAV -->
 <nav>
-  
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -102,7 +101,6 @@
   <h2>Who I am</h2>
 
   <div class="about-grid">
-    <!-- PHOTO COLUMN -->
     <div class="about-photo-col">
       <div class="photo-frame">
         <img src="photo.jpg" alt="Thomas Nguyen">
@@ -110,7 +108,7 @@
     </div>
 
     <div class="about-text">
-      <p>I'm Thomas Nguyen, a CS student at <strong>Washington State University</strong> (class of 2028). I build across the stack: from <strong>3D game systems</strong> in Unity to web apps, robotics, and real-time data tools.</p>
+      <p>I'm Thomas Nguyen, a CS student at <strong>Washington State University</strong> (class of 2028). I build across the stack: from <strong>systems programming in Rust</strong> to web apps, robotics, and real-time data tools.</p>
       <p>Outside of class I compete with <strong>Crimson Robotics</strong> (2× 1st place at WSU) and freelance on web projects for small businesses.</p>
       <p>I care about writing code that's practical and ships. Currently looking for internships and part-time engineering roles.</p>
     </div>
@@ -122,6 +120,7 @@
           <span class="tag">C++</span>
           <span class="tag">Python</span>
           <span class="tag">C#</span>
+          <span class="tag">Rust</span>
         </div>
       </div>
       <div class="skills-group">
@@ -158,25 +157,42 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">02 — projects</div>
-  <h2>Things I've built</h2>
+  <h2>Projects</h2>
 
   <div class="projects-list">
 
     <div class="project-item">
       <div class="project-row">
-        <div class="project-title">Stoneguard</div>
+        <div class="project-title">PostScript Interpreter</div>
         <div class="project-links">
-          <span class="project-status">Ongoing</span>
-          <a href="https://github.com/NguyenThomas986" class="project-link">GitHub</a>
+          <a href="https://github.com/NguyenThomas986/PostScript-Interpreter" target="_blank" class="project-link">GitHub</a>
         </div>
       </div>
-      <div class="project-date">January 2026 — Present</div>
+      <div class="project-date">Spring 2026 &nbsp;·&nbsp; Independent Project</div>
+      <div class="project-stack">
+        <span class="stack-chip">Rust</span>
+        <span class="stack-chip">REPL</span>
+        <span class="stack-chip">CI / GitHub Actions</span>
+      </div>
+      <p class="project-desc">Built a PostScript interpreter in Rust for CPTS 355, featuring a <strong>stack-based execution engine</strong> with dynamic and lexical scoping. Developed a complete REPL supporting arithmetic, control flow, arrays, dictionaries, strings, and type conversion. Achieved high <strong>code coverage</strong> by writing unit and integration tests and using coverage reports to identify untested execution paths — iterating until all major branches were exercised. CI automated via GitHub Actions.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-row">
+        <div class="project-title">Spreadsheet Application</div>
+        <div class="project-links">
+          <a href="https://github.com/NguyenThomas986/Spreadsheet" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+      <div class="project-date">Spring 2026 &nbsp;·&nbsp; Independent Project</div>
       <div class="project-stack">
         <span class="stack-chip">C#</span>
-        <span class="stack-chip">Unity</span>
-        <span class="stack-chip">3D</span>
+        <span class="stack-chip">.NET 10</span>
+        <span class="stack-chip">WinForms</span>
+        <span class="stack-chip">NUnit</span>
+        <span class="stack-chip">XML</span>
       </div>
-      <p class="project-desc">A 3D tower defense game where players place towers to defend a castle from waves of enemies. Built enemy <strong>AI pathfinding</strong>, wave spawning systems, and tower targeting logic in C#. Manages scene design and player mechanics with version control.</p>
+      <p class="project-desc">Built a from-scratch spreadsheet in C# (WinForms, .NET 10) for CPT_S 321 using <strong>expression trees</strong> and the Shunting-yard algorithm. Built a reactive cell dependency graph with circular reference detection and automatic re-evaluation on change. Applied the <strong>Command design pattern</strong> for multi-level undo/redo; added XML save/load and NUnit test coverage.</p>
     </div>
 
     <div class="project-item">
@@ -186,14 +202,13 @@
           <span class="project-status">Ongoing</span>
         </div>
       </div>
-      <div class="project-date">January 2026 — Present</div>
+      <div class="project-date">January 2026 — Present &nbsp;·&nbsp; Freelance</div>
       <div class="project-stack">
-        <span class="stack-chip">Freelance</span>
         <span class="stack-chip">Web</span>
         <span class="stack-chip">FTP</span>
         <span class="stack-chip">Excel</span>
       </div>
-      <p class="project-desc">Redesigning and modernizing a food truck catering website for the Yakima Valley. Migrating the live site via FTP during active wedding booking season. Building a <strong>3-stage catering request workflow</strong>: intake form → scoped proposal → event game plan, shareable with clients via Excel.</p>
+      <p class="project-desc">Redesigning and modernizing a food truck catering website serving the Yakima Valley. Migrating the live site via FTP during active wedding booking season. Building a <strong>3-stage catering request workflow</strong>: intake form → scoped proposal → event game plan, shareable with clients via Excel.</p>
     </div>
 
     <div class="project-item">
@@ -203,7 +218,7 @@
           <span class="project-status">Ongoing</span>
         </div>
       </div>
-      <div class="project-date">January 2026 — Present</div>
+      <div class="project-date">January 2026 — Present &nbsp;·&nbsp; Independent Project</div>
       <div class="project-stack">
         <span class="stack-chip">HTML</span>
         <span class="stack-chip">CSS</span>
@@ -258,8 +273,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Thomas Nguyen — Built with HTML & stubbornness</span>
-  <span>Pasco, WA → Pullman, WA</span>
+  <span>© 2026 Thomas Nguyen</span>
+  <span>Pasco, WA</span>
 </footer>
 
 <script src="script.js" defer></script>
