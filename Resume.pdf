@@ -1,74 +1,445 @@
 %PDF-1.3
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%ï¿½ï¿½ï¿½ï¿½
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/Contents 5 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+/Length 10230
 >>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 17 Tf 20.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 239.8785 759.6 Tm (Thomas Nguyen) Tj T* ET
+BT /F1 8.2 Tf 9.84 TL ET
+.2 .2 .2 rg
+BT 1 0 0 1 146.1082 745.6 Tm (\(509\) 975-5794  |  nguyenthomas986@gmail.com  |  6010 Ramus Ln, Pasco, WA 99301) Tj T* ET
+BT 1 0 0 1 123.6033 733.6 Tm (NguyenThomas986.github.io  |  GitHub: NguyenThomas986  |  LinkedIn: thomas-nguyen-2787a2365) Tj T* ET
+BT /F2 9.5 Tf 11.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 721.6 Tm (EDUCATION) Tj T* ET
+.5 .5 .5 RG
+.5 w
+n 39.6 715.6 m 572.4 715.6 l S
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 706.6 Tm (Washington State University) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 495.3511 706.6 Tm (Aug 2024 \227 Present) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 694.6 Tm (Pullman, WA) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 682.6 Tm (B.S., Computer Science  |  Anticipated Graduation: May 2028) Tj T* ET
+BT /F2 9.5 Tf 11.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 662.6 Tm (EXPERIENCE) Tj T* ET
+.5 .5 .5 RG
+.5 w
+n 39.6 656.6 m 572.4 656.6 l S
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 647.6 Tm (Crimson Robotics) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 496.7455 647.6 Tm (Fall 2024 \227 Present) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 635.6 Tm (Washington State University, Pullman, WA) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 623.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 623.6 Tm (Designed and developed competition robots in SolidWorks under strict design constraints.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 610.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 610.1 Tm (Led robot assembly and quality control, ensuring all mechanical components were correctly installed, aligned, and competition-ready.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 596.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 596.6 Tm (Collaborated in a 5-member team to integrate hardware and software systems for competitive robotics events.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 583.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 583.1 Tm (Achieved 1st overall in two WSU-hosted robotics competitions, competing against 10+ internal and external teams.) Tj T* ET
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 566.6 Tm (Wazzu Racing \227 Data Acquisition) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 538.2621 566.6 Tm (Fall 2024) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 554.6 Tm (Washington State University, Pullman, WA) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 542.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 542.6 Tm (Coordinated with electrical and framing teams to define wiring and dashboard layout for a racing vehicle.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 529.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 529.1 Tm (Designed dashboard interfaces to display key performance metrics and implemented real-time data collection systems.) Tj T* ET
+BT /F2 9.5 Tf 11.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 504.6 Tm (PROJECTS) Tj T* ET
+.5 .5 .5 RG
+.5 w
+n 39.6 498.6 m 572.4 498.6 l S
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 489.6 Tm (PostScript Interpreter) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 527.6464 489.6 Tm (Spring 2026) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 477.6 Tm (Independent Project \227 Rust) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 465.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 465.6 Tm (Built a PostScript interpreter in Rust for CPTS 355, featuring a stack-based execution engine with dynamic and lexical scoping.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 452.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 452.1 Tm (Developed a complete REPL supporting arithmetic, control flow, arrays, dictionaries, strings, and type conversion.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 438.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 438.6 Tm (Achieved high test coverage with unit and integration tests; integrated CI via GitHub Actions.) Tj T* ET
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 422.1 Tm (Spreadsheet Application) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 527.6464 422.1 Tm (Spring 2026) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 410.1 Tm (Independent Project \227 C# / .NET) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 398.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 398.1 Tm (Built a from-scratch spreadsheet in C# \(WinForms, .NET 10\) for CPT_S 321 using expression trees and the Shunting-yard algorithm.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 384.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 384.6 Tm (Built a reactive cell dependency graph with circular reference detection and automatic re-evaluation on change.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 371.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 371.1 Tm (Applied the Command design pattern for multi-level undo/redo; added XML save/load and NUnit test coverage.) Tj T* ET
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 354.6 Tm (Cascade Crust \227 Website Redesign & Catering Workflow System) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 496.7372 354.6 Tm (Jan 2026 \227 Present) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 342.6 Tm (Freelance) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 330.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 330.6 Tm (Collaborating with a small business owner to redesign and modernize a food truck catering website serving the Yakima Valley.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 317.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 317.1 Tm (Migrating existing site via FTP while maintaining live uptime during active wedding booking season.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 303.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 303.6 Tm (Building a 3-stage catering request system: web intake form, scoped proposal, and event game plan \227 shareable with clients via Excel.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 290.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 290.1 Tm (Updating menu, testimonials, partnerships, and brand-matched design including colors, fonts, and imagery.) Tj T* ET
+BT /F2 8.8 Tf 10.56 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 273.6 Tm (Personal Portfolio Website) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 496.7372 273.6 Tm (Jan 2026 \227 Present) Tj T* ET
+BT /F1 8.1 Tf 9.72 TL ET
+.3 .3 .3 rg
+BT 1 0 0 1 39.6 261.6 Tm (Independent Project) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 249.6 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 249.6 Tm (Designing and developing a personal portfolio website to showcase software and engineering projects.) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 41.6 236.1 Tm (\177) Tj T* ET
+BT 1 0 0 1 51.6 236.1 Tm (Implementing a clean, responsive layout with project highlights, technical skills, and contact information.) Tj T* ET
+BT /F2 9.5 Tf 11.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 211.6 Tm (SKILLS) Tj T* ET
+.5 .5 .5 RG
+.5 w
+n 39.6 205.6 m 572.4 205.6 l S
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 196.6 Tm (Languages: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 88.487 196.6 Tm (C++, Python, C#, Rust) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 185.6 Tm (Web & Backend: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 107.3944 185.6 Tm (React, FastAPI) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 174.6 Tm (Databases: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 86.1879 174.6 Tm (PostgreSQL) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 163.6 Tm (Libraries & Data: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 108.324 163.6 Tm (NumPy, Pandas) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 152.6 Tm (Game Development: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 122.1601 152.6 Tm (Unity, SFML, Godot) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 141.6 Tm (AI & LLM: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 80.6352 141.6 Tm (LLM API Integration, Prompt Engineering) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 130.6 Tm (Tools & Platforms: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 115.6944 130.6 Tm (Git/GitHub, WSL \(Windows Subsystem for Linux\), SolidWorks) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 119.6 Tm (Collaboration: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 98.1648 119.6 Tm (Microsoft Teams, Slack, Zoom, Microsoft Office \(Excel, Word, PowerPoint\)) Tj T* ET
+BT /F2 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 108.6 Tm (Concepts: ) Tj T* ET
+BT /F1 8.3 Tf 9.96 TL ET
+BT 1 0 0 1 82.4861 108.6 Tm (Object-Oriented Programming, Data Structures, Version Control, Hardware Assembly, Technical Documentation) Tj T* ET
+BT /F2 9.5 Tf 11.4 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 89.6 Tm (REFERENCES) Tj T* ET
+.5 .5 .5 RG
+.5 w
+n 39.6 83.6 m 572.4 83.6 l S
+BT /F1 8.3 Tf 9.96 TL ET
+0 0 0 rg
+BT 1 0 0 1 39.6 74.6 Tm (Cory Heron \227 Owner, Cascade Crust  |  Yakima Valley, WA) Tj T* ET
+BT 1 0 0 1 39.6 62.6 Tm (\(509\) 731-4408  |  info@cascadecrust.com) Tj T* ET
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+238.9 755.1 67.2 19 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 17 Tf
+20.4 TL
+ET
+BT
+1 0 0 1 239.9 757.1 Tm
+(Thomas) Tj
+T*
+ET
+1 1 1 rg
+n
+308.8 755.1 64.3 19 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 17 Tf
+20.4 TL
+ET
+BT
+1 0 0 1 309.8 757.1 Tm
+(Nguyen) Tj
+T*
+ET
+1 1 1 rg
+n
+38.6 718.6 58.5 11.5 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 9.5 Tf
+11.4 TL
+ET
+BT
+1 0 0 1 39.6 720.6 Tm
+(EDUCATION) Tj
+T*
+ET
+1 1 1 rg
+n
+38.6 659.6 63.2 11.5 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 9.5 Tf
+11.4 TL
+ET
+BT
+1 0 0 1 39.6 661.6 Tm
+(EXPERIENCE) Tj
+T*
+ET
+1 1 1 rg
+n
+38.6 501.6 53.2 11.5 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 9.5 Tf
+11.4 TL
+ET
+BT
+1 0 0 1 39.6 503.6 Tm
+(PROJECTS) Tj
+T*
+ET
+1 1 1 rg
+n
+38.6 208.6 35.8 11.5 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 9.5 Tf
+11.4 TL
+ET
+BT
+1 0 0 1 39.6 210.6 Tm
+(SKILLS) Tj
+T*
+ET
+1 1 1 rg
+n
+38.6 86.6 66.9 11.5 re
+f*
+0.101961 0.301961 0.180392 rg
+BT
+/F2-0 9.5 Tf
+11.4 TL
+ET
+BT
+1 0 0 1 39.6 88.6 Tm
+(REFERENCES) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 6 0 obj
 <<
-/Author (anonymous) /CreationDate (D:20260424044518+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260424044518+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (unspecified) /Title (untitled) /Trapped /False
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/Count 1 /Kids [ 4 0 R ] /Type /Pages
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3269
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
-stream
-GauHND/\/u')nJ00gL:6\OqbS:8M=_.!"==P3=HnmMu]U<ocm,RcLcdU_O(-j)8Q*,.d<PP1^o9(nn=,SX3u$T%T),A,Ki)hbaaMH3GrT/[0%nD8:0^0!+1h><Od7gL(3W\NOgp+.G4>Q53T1/DHSO_BAInn0TA%<[g.<m:=?rI+X_iT"T[)0<k:W/(T;kAG3pm)S,W/p%)"ejn^3;*81t6?7l$I\Mp,8^48f5%D?0/!rN9G1E.'@f1G3+YYCNV7ZgBh\,P"u__k([%J+B9$`5./J=?q69UrB\:q_$bgDTfsa+;$GlCBG@<m;tdXXJASH6f<>jK0ieQ0VN@RoSU_\]F2`I$MBs9#Y58n'DQ]JD#tOrROCqqSk<7Z$t<t%QQYUX]iWqRnqLke^_\N*I0'2qRM&Js5#u`lF/>8BF8'Ritg0D!m>3UE"nc>a!8q16NtJYXhYCp4-=@fRDH1:"c#mA\E?JBip[clS-fF`hqPu<GU(88XNiF7jVBRb]5VQ?!A"r:)#MA7>F#-%DG]I\p%*tOrktqX0?PP3=[i[BWm[0Nd&n\/*\BkaR*%6=$a*kT$(aT@5iX%=6mQgF<=Ed\Mb@(VM*Q@4%V0)%$Q6\9BJB=/0tY/gI@/;TJ;3Og*GADJ:P=Jk#.4Y6,uT`4\<^oe-L7Si_&m)Cn2d9s=d&[dJ8i.c7Q"51rb-:#Isnr.1UgBr4C48bLC<!Y/[cMuLLi3Yr158ka!WEb3A1No#S_PgK0[[m,2sQ@mPL/2N%!20&lF5KOUumh_[i-U$9dZe#NET]ac:Q'*0iF>!n3U9lf;G)qR'i?\sQGIPY;:s1L2I="Ala0*pm&V,*j'uAVMA[Yigo(ZVin8:lIZ7E&!CYpl=mp^khEgBW*nK&,g><-N7_a4"d&G,[kJf9]BQ,(jNq4D9'F+S>B%Qr3YBd=o^X]i]TZP89ZXEKmD#M?1:h27]N4LpUkMmAf)X7HABrWS^YH$>^-kJ"E#64V$iBP-kn9jZ.M^Z=ah:WUb8*lPFA%MkX"f.;;O'c*u:=6N%\.bYpL"Nch.Bcl>-:BX&,C;CgLJ_PfOL^g>#Yj2lpD+&cGl?D:Ep4-Tq\PO)J6nc.\W:[nM(=qu83GSnjr(olf:n8em9.+FT<@$$_'TWD)ST3&c_kjDko.!e/?P,3-2A8p2\%B\HX!(-o_HZ7HFH)5o#cpO"?_K_GV\4ZO,<mD?=2*n<&+h6;]:L'X?F_JmO+OQ5M%@0j+-Vjtu_`\`h?#u<9Q.4$rHL4r/Y8jq`/=<l0k<6+<0Ig#(MciJ(?;Om'65L-.,jU#J5SV/"=:d$t(%(K_%+"XW!/0cJ3!j9US\`3D]am!@]'6&B/Zb\CUfYI^^q^.[L1d'e*qe".D=&pHcOM>1>W]G-*l::*Yal%5gn$K/W/ppr^"</\0>Ub]9Uj>[;R7*Gq<_IBoDZCa%MRnLNs(Ba8E6U5;MTV^B!0(XG.ebVmj$SQh)&\egr3Jss*1_+t^L+.SSpaeF*>cG(km]F#,!da<HFB2n0(W>JWadGV)j<o_K8)8!-BWXkqF\!pG*c<uI):RWT83P[>?u6#ifFgra@s^?=\fErnAKjc$er,#'AFNC6O[:3]'$L38"#4..N()uTQnjFrV_j/`%\lVHbnum'YB^rX$)rJCH$7K`'V26GFTIgOlm%&U/tuD;n'BVT9d&?`Vc@-48f@i_W\mReLTG#,WlO_a+[7eDNmhM3l9N<44##:@KrTJ\'Jt\G);1\;+bS4]P_(5=oE84CLe0V-AV-;pp/HT'T2L^]+d=:b?^N5H41>6TieUc-;F=;g^2fc!.J2*=H"RrL8[Q]3D^BUkPtnHHrj`>&h5@EVJu&0.6TQ5(c/m@L1D,O$^i42,$Zk`pFN9JB>>UX$ar4OJ.l$4#..ZLZ@Q(0a&,('L,(PiiHS.WeV#M+P<oZk.VCSoad7n*np=baN:6cD*pX]Uk:[LjWj2!0-d)8jeY$P-4"Xm21**V:[8k^*9KLtu2=a2;XLqU4>F8l"0c<R#,?7ZE)D]`VJ9N\sO,EkV16_0VlMU(W"S<>U+X,jq%hd1_7)ZPBO$auacN"p]DG&E.9hC9-$?DcdbU4"C[EC#cWPfB3'43_!#Up?cWf6?gC1=HOj.s5s2r#9:pJ5r[;?fA5^tWq'FfaLhppUXgMf!;Y1'MOo@5OcdFLbSjIO>b=^3%5BJ*H9PC-\1gI(*]6<FOPO32Xa(P]oS.B=`"OG/bo$Y8e?V_29bKj:%/'@3]XlT_P]:-"TNh?Vs(e$*u]g=e6*3;8S:;Q-?(:8]<F.6k3FU(?8ea<I!+ThK-,#l8B_m'qqB2Enp";f#W;`gQN;s@u^p]j`)#,*)"G*.6\r@R:$=ZTq&(`&W<Dr?5'6E_V`7q)AmBcT#dY%1sWuf7OhZS5seVeJM>o#oef4b.qEhM"DWMa83.;a+;*DM7*)6eoe'._:&^;"Ac'a*r?D`I?ejJZBm;ipXQJ2Zk,oPFL&\gUE8GoN.7%(IoM4g!*$gPW;[2T#Pc3"VY:Ssa(hGf.M-+X3?8^bcAOhu(3X!:WjiE=Yf$jp3-M;+*%0KDq0B!X;a0%I8e9<*.FE;tg\K2>S1IHT\fYDIWCi3Gd&=.g\Ra4ctbjBEE#,ccn0U\P\;dm)SP&mEo,poO="fFbg,:EsjDA[I`9u$RC!/j4LPN_N#2hOVujR^k0gCnk6[bnr;*+1L2c;rI6#:!m@\fH@R`(:2Qa`MO-\E]u'd*N[l5,A#N$-ks6L;BZ1MoP[silchqq^L\ej_QQRDUTG]N[.&ci'mRtFupm4Pj*d[)DOP1=8+f>WTc:qm4J"RHMFBp5$q#&/H)j(O\(cUoith;T+Bk^N+Gde\kVHr>bNt:oCqFg)]>F2fc<p<"V?OQGc[M0#LjR<]R\\?YkD#.-)rIE'*?#p@0ICQo+>cc"gZ7L<p3ab]W=jO#&po==/0R_pDT@Z]&HFr,+=Fkr-\BNd(,n9B9q()Zk!,544Q,]U/B`j_iDD(,#XSM*3AA*)Dt9o":a9r;Bk-_If",k&NI&P4u`CV5a,-*d?Ap[((sd0m>HDtNl0F5S8.WS#mCN;7d+%s;'4E>qM$)WW6V+LCP]Te:?Df37ECX(OJ5]rEqWFS8;;b7I5go'\Y?[6YODb[US`+HO\n]lqrgo)=`(H-i4Y^fcE?Cqqijhn3h8`S*nif'er>,_NMfYpi#Pn)VXP[ALr1k>@%aC_r<G.3f9\-$0:^ddQ288*"HG?]h/R*R&_$LuW]#Z(55k5AN\l"S?]SE#kP~>endstream
+endobj
+9 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 9
+0 10
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000514 00000 n 
-0000000582 00000 n 
-0000000843 00000 n 
-0000000902 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000407 00000 n 
+0000010690 00000 n 
+0000010797 00000 n 
+0000010904 00000 n 
+0000011016 00000 n 
 trailer
 <<
-/ID 
-[<0f8483411dade738ed69ccd579b80ded><0f8483411dade738ed69ccd579b80ded>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 6 0 R
-/Root 5 0 R
-/Size 9
+/Size 10
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-4262
+11128
 %%EOF
