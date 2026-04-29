@@ -91,6 +91,7 @@
       linear-gradient(90deg, rgba(45,90,61,0.07) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, black 30%, transparent 100%);
+    pointer-events: none;
   }
 
   .hero-tag {
