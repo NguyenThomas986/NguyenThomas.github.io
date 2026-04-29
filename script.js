@@ -70,7 +70,7 @@
   // Try to fetch real data from GitHub contributions API proxy
   async function fetchReal() {
     try {
-      const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=last`);
+      const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=2026`);
       if (!res.ok) throw new Error('API error');
       const json = await res.json();
       // jogruber API returns { contributions: [ { date: "YYYY-MM-DD", count: N, level: 0-4 }, ... ] }
