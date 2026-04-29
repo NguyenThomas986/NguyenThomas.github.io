@@ -206,6 +206,7 @@
   section {
     padding: 6rem 3rem;
     position: relative;
+    scroll-margin-top: 80px;
   }
 
   .section-label {
