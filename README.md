@@ -1,7 +1,7 @@
 # Portfolio To-Do
 
 - [ ] Add Open Graph tags so the link preview looks good when shared on LinkedIn
-- [ ] Add a favicon — the browser tab is blank
+- [x] Add a favicon — the browser tab is blank
 - [ ] Add `<main>` landmark tag wrapping the page content
 - [ ] Add `prefers-reduced-motion` guard for the pulsing dot animation
 - [ ] Fix mobile nav — all links + resume button overflow on small phones
